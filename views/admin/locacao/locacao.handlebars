@@ -1,0 +1,34 @@
+<main>
+ <div class="p-5 mb-4 bg-light rounded-3">
+ <div class="container-fluid py-5">
+ <h2>Lista de Locações</h2>
+ <hr>
+ <a href="/rota_locacao/locacao/add">
+ <button class="btn btn-success">Nova Locação</button></a>
+ {{#each locacoes}}
+ <div class="card mt-4">
+ <div class="card-body">
+ <h4><b>ID:</b>{{id_locacao}}</h4>
+ <small><b>Produto:</b> {{fk_produto}} </small><br>
+ <small><b>Cliente:</b> {{fk_cliente}} </small><br>
+ <small><b>Valor total:</b> {{valor_total}} </small><br>
+ <small><b>Data da compra:</b> {{data_compra}} </small><br>
+ <small><b>Quantidade:</b> {{quantidade}} </small><br>
+ <!--Botão para editar locação-->
+ <a href="/rota_locacao/editar_locacao/{{id_locacao}}">
+ <button class="btn btn-success mt-3">
+ Editar locação
+ </button>
+ </a>
+ <!--botão para deletar locação-->
+ <a href="/rota_locacao/deletar_locacao/{{id_locacao}}">
+ <button class="btn btn-danger mt-3">
+ Deletar locação
+ </button>
+ </a>
+ </div>
+ </div>
+ {{/each}}
+ </div>
+ </div>
+</main>

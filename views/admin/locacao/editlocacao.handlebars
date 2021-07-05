@@ -1,0 +1,51 @@
+<main>
+ <div class="p-5 mb-4 bg-light rounded-3">
+ <div class="container-fluid py-5">
+ <h3> Editar Locação: </h3>
+ <div class="card">
+ <div class="card-body">
+ <form action="/rota_locacao/locacao/editar_locacao" method="POST">
+ {{#each locacoes}}
+
+<label for="id_locacao">ID: </label>
+ <input type="text" name="id_locacao" readonly="true" class="form-control" value="{{id_locacao}}">
+ <br>
+<label for="valor_total">Valor total: </label>
+ <input type="text" id="valor_total" name="valor_total" class="form-control" value="{{valor_total}}">
+ <br>
+ <label for="data_compra">Data compra: </label>
+ <input type="date" id="data_compra" name="data_compra" class="form-control" value="{{data_compra}}">
+ <br>
+ <label for="quantidade">Quantidade: </label>
+ <input type="number" id="quantidade" name="quantidade" class="form-control" value="{{quantidade}}">
+ <br>
+ {{/each}}
+ 
+<br>
+ <label for="produto">Produto:</label>
+ <select name="produto" class="custom-select">
+ {{#each produtos}}
+ <option value="{{id_produto}}">{{descricao}}</option>
+ {{else}}
+<option value="0">Nenhum produto registrado</option>
+ {{/each}}
+ </select>
+<br>
+<br>
+ <label for="cliente">Cliente:</label>
+ <select name="cliente" class="custom-select">
+ {{#each clientes}}
+ <option value="{{id_cliente}}">{{nome}}</option>
+ {{else}}
+<option value="0">Nenhum cliente registrado</option>
+ {{/each}}
+ </select>
+<br>
+<br>
+<button type="submit" class="btn btn-success">Editar Locação</button>
+</form>
+ </div>
+ </div>
+ </div>
+ </div>
+</main>

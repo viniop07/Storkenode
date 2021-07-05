@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- acrescente os links abaixo dos css ele já vai entender que
+ está na pasta public -->
+ <link rel="shortcut icon" href="/public/img/logo_oficial.png">
+ <link rel="stylesheet" href="/public/css/bootstrap.css">
+ <link rel="stylesheet" href="/public/css/style.css">
+ <title>Storke</title>
+</head>
+<body>
+<div class="container mt-4">
+ <!-- o sinal de >(maior) antes da interpolação mostra que você
+quer pegar um arquivo dentro da pasta partials -->
+ {{>_navbar}}
+ {{{body}}}
+ {{>_footer}}
+ </div>
+</body>
+<script src="/public/js/bootstrap.js"></script>
+</html>

@@ -1,0 +1,48 @@
+<main>
+ <div class="p-5 mb-4 bg-light rounded-3">
+ <div class="container-fluid py-5">
+ <h3> Nova Locação: </h3>
+ <div class="card">
+ <div class="card-body">
+ <form action="/rota_locacao/locacao/nova" method="POST">
+
+
+<br><br>
+ <label for="produto">Produto:</label>
+ <select name="produto" class="custom-select">
+ {{#each produtos}}
+ <option value="{{id_produto}}">{{descricao}}</option>
+ {{else}}
+<option value="0">Nenhum produto registrdo</option>
+ {{/each}}
+ </select>
+ <br><br>
+ <label for="cliente">Cliente:</label>
+ <select name="cliente" class="custom-select">
+ {{#each clientes}}
+ <option value="{{id_cliente}}">{{nome}}</option>
+ {{else}}
+<option value="0">Nenhum cliente registrdo</option>
+ {{/each}}
+ </select>
+ <br><br>
+ <label for="valor_total">Valor total: </label>
+ <input type="text" id="valor_total" name="valor_total"
+ placeholder="Valor total da compra" class="formcontrol">
+ <br>
+ <label for="data_compra">Data da Compra: </label>
+ <input type="date" id="data_compra" name="data_compra"
+ placeholder="Data da Compra" class="formcontrol">
+ <br>
+ <label for="quantidade">Quantidade: </label>
+ <input type="number" id="quantidade" name="quantidade"
+ placeholder="Quantidade de produtos" class="form-control">
+ <br>
+
+ <button type="submit" class="btn btnsuccess">Criar Locação</button>
+ </form>
+ </div>
+ </div>
+ </div>
+ </div>
+</main>

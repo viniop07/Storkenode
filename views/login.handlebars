@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport"
+ content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/public/img/logo_oficial.png">
+
+ <link rel="stylesheet"href="/public/css/style.css">
+ <link rel="stylesheet" href="/public/css/bootstrap.css">
+ <title>Tela de Login</title>
+</head>
+<body> 
+ <center>
+ <div class="container mt-4">
+ <main class="form-signin"><br><br>
+ <form action="/admin/autenticar" method="POST">
+ <img class="mb4" src="/public/img/users.png" alt="" width="200" height="200">
+ <h1 class="h3 mb-3 fw-normal">Tela de Login</h1>
+ 
+ <div class="form-floating" style="width: 600px;">
+ <input type="text" class="form-control"
+ id="nome" name="nome" placeholder="Insira o nome completo">
+ <label for="nome">Nome do Usuario</label>
+ </div>
+ <br>
+ <div class="form-floating" style="width: 600px;">
+ <input type="password" class="form-control" 
+ id="senha" name="senha" placeholder="Insira sua senha">
+ <label for="senha">Senha</label>
+ </div>
+ 
+ <button class="btn btn-success mt-3" type="submit" >Logar</button>
+ <p class="mt-5 mb-3 text-muted">&copy; 2021–2025</p>
+ </form>
+ </main> 
+ </div>
+</center>
+</body>
+</html>
